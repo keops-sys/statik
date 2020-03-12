@@ -3,7 +3,7 @@ services:
   server:
     image: pagespeed/nginx-pagespeed
     ports:
-      - "80:8080"
+      - "80:80"
     container_name: statik
     restart: unless-stopped
     networks:
@@ -11,7 +11,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:statik.keops.io"
-      - "traefik.port=80"
+      #- "traefik.port=80"
       - "traefik.basic.protocol=http"
       - "traefik.docker.network=web"
     volumes:
