@@ -3,6 +3,8 @@
 
 #hugo --minify
 
+git pull
+
 docker stop statik
 docker rm statik
 
