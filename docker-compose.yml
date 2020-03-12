@@ -16,7 +16,7 @@ services:
       - "traefik.basic.protocol=http"
       - "traefik.docker.network=web"
     volumes:
-      - /./public:/usr/share/nginx/html
+      - ./public:/usr/share/nginx/html
     environment:
       - NODE_ENV=production
       - url=statik.keops.io
