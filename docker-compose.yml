@@ -1,0 +1,22 @@
+version: '2'
+services:
+  server:
+    image: pagespeed/nginx-pagespeed
+    container_name: statik
+    restart: unless-stopped
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:statik.keops.io"
+      - "traefik.port=2368"
+      - "traefik.docker.network=web"
+    volumes:
+      - /./public:/usr/share/nginx/html
+    environment:
+      - NODE_ENV=production
+      - url=statik.keops.io
+
+networks:
+  web:
+    external: true
