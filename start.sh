@@ -10,3 +10,4 @@ docker rm landing-statik
 #docker run --name landing-statik -d -p 8080:80 statik
 
 docker-compose up -d
+
