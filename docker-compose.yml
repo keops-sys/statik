@@ -7,21 +7,12 @@ services:
     networks:
       - web
     labels:
-      # - traefik.http.routers.STATIK-SERVICE-http.entrypoints=insecure
-      # - traefik.http.routers.STATIK-SERVICE-http.rule=Host(`statik.keops.io`)
-      
-      # - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
-      # - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
-      # - traefik.http.routers.STATIK-SERVICE-http.middlewares=https-redirect@docker
-      
-      # - traefik.http.routers.STATIK-SERVICE-https.entrypoints=secure
-      # - traefik.http.routers.STATIK-SERVICE-https.rule=Host(`statik.keops.io`)
-      # - traefik.http.routers.STATIK-SERVICE-https.tls=true
-      # - traefik.http.routers.STATIK-SERVICE-https.tls.certresolver=letsencrypt
       - traefik.enable=true
-      - traefik.http.routers.STATIK-SERVICE.rule=Host(`statik.keops.io`)
-      - traefik.http.routers.STATIK-SERVICE.entryPoints=insecure 
-      - traefik.port=80
+      - traefik.docker.network=web
+      - traefik.http.routers.statik.entrypoints=insecure, secure
+      - traefik.http.routers.statik.rule=Host(`statik.keops.io`)
+      - traefik.http.routers.statik.tls=true
+      - traefik.http.routers.statik.tls.certresolver=letsencrypt
     volumes:
       - ./public:/usr/share/nginx/html
     environment:
