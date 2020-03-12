@@ -3,7 +3,7 @@ services:
   server:
     image: pagespeed/nginx-pagespeed
     ports:
-      - "8080:80"
+      - "8080:8080"
     container_name: statik
     restart: unless-stopped
     networks:
