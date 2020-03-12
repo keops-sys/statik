@@ -9,5 +9,7 @@ docker rm landing-statik
 #docker build -t statik .
 #docker run --name landing-statik -d -p 8080:80 statik
 
+cd /root/statik
+
 docker-compose up -d
 
