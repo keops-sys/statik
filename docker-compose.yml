@@ -3,7 +3,7 @@ services:
   server:
     image: pagespeed/nginx-pagespeed
     container_name: statik
-    restart: unless-stopped
+    restart: always
     networks:
       - web
     labels:
