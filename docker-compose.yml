@@ -2,6 +2,8 @@ version: '2'
 services:
   server:
     image: pagespeed/nginx-pagespeed
+    ports:
+      - "80:80"
     container_name: statik
     restart: unless-stopped
     networks:
