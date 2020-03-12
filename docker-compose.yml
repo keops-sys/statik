@@ -22,6 +22,7 @@ services:
       - traefik.http.routers.STATIK-SERVICE.rule=Host(`statik.keops.io`)
       - traefik.http.routers.STATIK-SERVICE.entryPoints=insecure 
       - traefik.port=80
+      - traefik.http.routers.STATIK-SERVICE-http.middlewares=https-redirect@docker
     volumes:
       - ./public:/usr/share/nginx/html
     environment:
