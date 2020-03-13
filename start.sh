@@ -16,5 +16,5 @@ git pull
 #docker stop statik
 #docker rm statik
 
-HOSTNAME=statik.keops.io HOST=statikdocker-compose up -d
+HOSTNAME=statik.keops.io HOST=statik docker-compose up -d
 #HOSTNAME=dev.keops.io docker-compose up
