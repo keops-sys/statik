@@ -23,4 +23,4 @@ git pull
 NAME=statik
 HOSTNAME=statik.keops.io
 
-HOSTNAME=HOSTNAME NAME=NAME docker-compose up -d
+HOSTNAME=statik.keops.io NAME=statik docker-compose up -d
