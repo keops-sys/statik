@@ -9,8 +9,8 @@
 #docker build -t statik .
 #docker run --name landing-statik -d -p 8080:80 statik
 
-name='statik'
-hostname='statik.keops.io'
+name=$1
+hostname=$2
 
 
 cd "$(dirname "$0")"
