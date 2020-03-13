@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Using Hugo to serve
 #hugo server -D
 #hugo server --bind 127.0.0.1 --port 8080 --disableFastRender
@@ -7,6 +9,8 @@
 #docker build -t statik .
 #docker run --name landing-statik -d -p 8080:80 statik
 
+name='statik'
+hostname='statik.keops.io'
 
 
 cd "$(dirname "$0")"
@@ -20,4 +24,4 @@ git pull
 #HOSTNAME=dev.keops.io NAME=dev docker-compose up -d
 
 
-HOSTNAME=statik.keops.io NAME=statik docker-compose up
+HOSTNAME=hostname NAME=name docker-compose up
