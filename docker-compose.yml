@@ -6,10 +6,10 @@ services:
     networks:
       - web
     labels:
-      - "traefik.http.routers.$HOST.entrypoints=https"
-      - "traefik.http.routers.$HOST.rule=Host(`$HOSTNAME`)"
-      - "traefik.http.routers.$HOST.tls=true"
-      - "traefik.http.routers.$HOST.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.${HOST}.entrypoints=https"
+      - "traefik.http.routers.${HOST}.rule=Host(`$HOSTNAME`)"
+      - "traefik.http.routers.${HOST}.tls=true"
+      - "traefik.http.routers.${HOST}.tls.certresolver=letsencrypt"
     volumes:
       - ./public:/usr/share/nginx/html
     environment:
