@@ -8,7 +8,7 @@ services:
       - web
     labels:
       - traefik.http.routers.statik-https.entrypoints=https
-      - traefik.http.routers.statik-https.rule=Host(`statik.keops.io`)
+      - traefik.http.routers.statik-https.rule=Host(`$HOSTNAME`)
       - traefik.http.routers.statik-https.tls=true
       - traefik.http.routers.statik-https.tls.certresolver=letsencrypt
     volumes:
