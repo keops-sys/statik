@@ -3,6 +3,7 @@ services:
   server:
     image: pagespeed/nginx-pagespeed
     restart: always
+    container_name: ${HOST}
     networks:
       - web
     labels:
