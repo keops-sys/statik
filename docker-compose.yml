@@ -7,12 +7,12 @@ services:
     networks:
       - web
     labels:
-      - traefik.http.routers.NOM-SERVICE-http.entrypoints=http
-      - traefik.http.routers.NOM-SERVICE-http.rule=Host(`statik.keops.io`)
+      # - traefik.http.routers.NOM-SERVICE-http.entrypoints=http
+      # - traefik.http.routers.NOM-SERVICE-http.rule=Host(`statik.keops.io`)
       
-      - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
-      - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
-      - traefik.http.routers.NOM-SERVICE-http.middlewares=https-redirect@docker
+      # - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
+      # - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
+      # - traefik.http.routers.NOM-SERVICE-http.middlewares=https-redirect@docker
       
       - traefik.http.routers.NOM-SERVICE-https.entrypoints=https
       - traefik.http.routers.NOM-SERVICE-https.rule=Host(`statik.keops.io`)
