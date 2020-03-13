@@ -2,7 +2,6 @@ version: '2'
 services:
   server:
     image: pagespeed/nginx-pagespeed
-    container_name: statik
     restart: always
     networks:
       - web

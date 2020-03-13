@@ -13,10 +13,9 @@ cd "$(dirname "$0")"
 
 git pull
 
-docker stop statik
-docker rm statik
+#docker stop statik
+#docker rm statik
 
-export HOSTNAME=statik.keops.io
+HOSTNAME=statik.keops.io docker-compose up -d
 
-docker-compose up -d
-
+#HOSTNAME=dev.keops.io docker-compose up -d
