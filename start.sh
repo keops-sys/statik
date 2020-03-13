@@ -7,6 +7,8 @@
 #docker build -t statik .
 #docker run --name landing-statik -d -p 8080:80 statik
 
+
+
 cd "$(dirname "$0")"
 
 git pull
@@ -14,7 +16,7 @@ git pull
 docker stop statik
 docker rm statik
 
-
+export HOSTNAME=statik.keops.io
 
 docker-compose up -d
 
