@@ -20,7 +20,4 @@ git pull
 #HOSTNAME=dev.keops.io NAME=dev docker-compose up -d
 
 
-NAME=statik
-HOSTNAME=statik.keops.io
-
-HOSTNAME=statik.keops.io NAME=statik docker-compose up -d
+HOSTNAME=statik.keops.io NAME=statik docker-compose up
