@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Launch Name:" + $1
+echo "Launch url:" + $2
+
 # Using Hugo to serve
 #hugo server -D
 #hugo server --bind 127.0.0.1 --port 8080 --disableFastRender
