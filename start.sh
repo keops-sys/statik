@@ -22,9 +22,6 @@ echo "Launch url:" $2
 #docker build -t statik .
 #docker run --name landing-statik -d -p 8080:80 statik
 
-name=$1
-hostname=$2
-
 
 cd "$(dirname "$0")"
 
@@ -37,4 +34,4 @@ git pull
 #HOSTNAME=dev.keops.io NAME=dev docker-compose up -d
 
 
-HOSTNAME=hostname NAME=name docker-compose up
+HOSTNAME=$2 NAME=$1 docker-compose up
