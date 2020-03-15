@@ -1,4 +1,4 @@
 git add .
 git commit -m "toto"
 git push
-ssh root@keops.io '/root/statik/start.sh'
+#ssh root@keops.io '/root/statik/start.sh'

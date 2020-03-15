@@ -1,7 +1,17 @@
 #!/bin/bash
 
-echo "Launch Name:" + $1
-echo "Launch url:" + $2
+if [ -z "$1" ]; then
+    echo "Missing url"
+    exit 1
+fi
+
+if [ -z "$2" ]; then
+    echo "Missing url"
+    exit 1
+fi
+
+echo "Launch Name:" $1
+echo "Launch url:" $2
 
 # Using Hugo to serve
 #hugo server -D
