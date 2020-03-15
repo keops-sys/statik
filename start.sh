@@ -28,7 +28,9 @@ git pull
 docker stop statik
 docker rm statik
 
-hugo --minify
+cd hugo && hugo --minify
+
+cd "$(dirname "$0")"
 
 #HOSTNAME=statik.keops.io NAME=statik docker-compose up -d
 #HOSTNAME=dev.keops.io NAME=dev docker-compose up -d
