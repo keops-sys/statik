@@ -1,4 +1,5 @@
 #!/bin/bash
+# Store this script at project directory
 echo "Launch Name:" $1
 echo "Launch url:" $2
 
