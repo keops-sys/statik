@@ -1,4 +1,4 @@
-baseURL = "https://statik.keops.io"
+baseURL = "/"
 languageCode = "fr-FR"
 title = "Hugo Serif Theme"
 themesDir = "themes"
