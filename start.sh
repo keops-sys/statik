@@ -35,6 +35,6 @@ docker rm statik
 
 cd "$(dirname "$0")"
 
-HOSTNAME=statik.keops.io NAME=statik docker-compose up -d
+#HOSTNAME=statik.keops.io NAME=statik docker-compose up -d
 #HOSTNAME=dev.keops.io NAME=dev docker-compose up -d
-#HOSTNAME=$2 NAME=$1 docker-compose up -d
+HOSTNAME=$2 NAME=$1 docker-compose up -d
