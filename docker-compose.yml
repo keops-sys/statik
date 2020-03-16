@@ -12,7 +12,7 @@ services:
       - "traefik.http.routers.${NAME}.tls=true"
       - "traefik.http.routers.${NAME}.tls.certresolver=letsencrypt"
     volumes:
-      - ./hugo/public:/usr/share/nginx/html
+      - ./public:/usr/share/nginx/html
     environment:
       - NODE_ENV=production
 
