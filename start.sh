@@ -23,7 +23,7 @@ echo "Launch url:" $2
 
 cd "$(dirname "$0")"
 
-git pull
+git reset --hard
 
 docker stop statik
 docker rm statik
