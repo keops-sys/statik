@@ -20,15 +20,18 @@ echo "Launch url:" $2
 #docker build -t statik .
 #docker run --name landing-statik -d -p 8080:80 statik
 
-
+#wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.deb
+#sudo dpkg -i hugo_0.54.0_Linux-64bit.deb
 cd "$(dirname "$0")"
 
 git reset --hard
+git pull
 
 docker stop statik
 docker rm statik
 
-cd hugo && hugo --minify
+# NOT WORKING even with same version for dev that show no error
+#cd hugo && hugo --minify
 
 cd "$(dirname "$0")"
 
