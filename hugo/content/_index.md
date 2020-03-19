@@ -1,10 +1,10 @@
 ---
 title: 'Home'
-intro_image: images/undraw_problem_solving_ft81.svg
+intro_image: images/undraw_active_options_8je6.svg
 intro_image_absolute: true # edit /assets/scss/components/_intro-image.scss for full control
 intro_image_hide_on_mobile: true
 ---
 
-# Serif - A Hugo Business Theme.
+# Statik - fast html service
 
-## Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+## Flashtml provide the fastest way to deliver raw html content for your website
