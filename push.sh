@@ -1,3 +1,5 @@
+hugo --minify
+
 git add .
 git commit -m "toto"
 git push
