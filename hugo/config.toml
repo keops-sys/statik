@@ -32,11 +32,6 @@ theme = "hugo-serif-theme"
     url = "/services/"
       weight = 1
 
-  [[menu.main]]
-      name = "Team"
-      url = "/team/"
-      weight = 2
-
   # Footer Menu
   [[menu.footer]]
     name = "Home"
