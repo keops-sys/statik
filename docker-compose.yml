@@ -9,10 +9,10 @@ services:
     labels:
       traefik.enable: "true"
       traefik.http.routers.service-http.rule: "Host(`statik.keops.io`)"
-      traefik.http.routers.service-http.entrypoints: "web"
+      traefik.http.routers.service-http.entrypoints: "http"
       traefik.http.routers.service-http.middlewares: "https-redirect@file"
       traefik.http.routers.service-https.rule: "Host(`statik.keops.io`)"
-      traefik.http.routers.service-https.entrypoints: "websecure"
+      traefik.http.routers.service-https.entrypoints: "https"
       traefik.http.routers.service-https.middlewares: "security@file, compression@file"
       traefik.http.routers.service-https.tls: "true"
       traefik.http.routers.service-https.tls.certresolver: "letsencrypt"
