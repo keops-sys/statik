@@ -11,8 +11,8 @@ services:
       - "traefik.http.routers.${NAME}.rule=Host(`$HOSTNAME`)"
       - "traefik.http.routers.${NAME}.tls=true"
       - "traefik.http.routers.${NAME}.tls.certresolver=letsencrypt"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-      - "traefik.http.routers.${NAME}.middlewares=https-only"
+      # - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      # - "traefik.http.routers.${NAME}.middlewares=https-only"
     volumes:
       - ./hugo/public:/usr/share/nginx/html
     environment:
