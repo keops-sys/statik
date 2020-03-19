@@ -1,4 +1,4 @@
-hugo --minify
+cd hugo && hugo --minify
 
 git add .
 git commit -m "toto"
