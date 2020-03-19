@@ -7,12 +7,15 @@ services:
     networks:
       - web
     labels:
-      - "traefik.http.routers.${NAME}.entrypoints=https"
-      - "traefik.http.routers.${NAME}.rule=Host(`$HOSTNAME`)"
-      - "traefik.http.routers.${NAME}.tls=true"
-      - "traefik.http.routers.${NAME}.tls.certresolver=letsencrypt"
-      # - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-      # - "traefik.http.routers.${NAME}.middlewares=https-only"
+      traefik.enable: "true"
+      traefik.http.routers.service-http.rule: "Host(`statik.keops.io`)"
+      traefik.http.routers.service-http.entrypoints: "web"
+      traefik.http.routers.service-http.middlewares: "https-redirect@file"
+      traefik.http.routers.service-https.rule: "Host(`statik.keops.io`)"
+      traefik.http.routers.service-https.entrypoints: "websecure"
+      traefik.http.routers.service-https.middlewares: "security@file, compression@file"
+      traefik.http.routers.service-https.tls: "true"
+      traefik.http.routers.service-https.tls.certresolver: "letsencrypt"
     volumes:
       - ./hugo/public:/usr/share/nginx/html
     environment:
